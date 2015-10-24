@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CDC291FA1BDBFB5B001853BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC291F91BDBFB5B001853BE /* main.m */; };
 		CDC291FD1BDBFB5B001853BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC291FC1BDBFB5B001853BE /* AppDelegate.m */; };
-		CDC292001BDBFB5B001853BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC291FF1BDBFB5B001853BE /* ViewController.m */; };
+		CDC292001BDBFB5B001853BE /* MoviesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC291FF1BDBFB5B001853BE /* MoviesListViewController.m */; };
 		CDC292031BDBFB5B001853BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC292011BDBFB5B001853BE /* Main.storyboard */; };
 		CDC292051BDBFB5B001853BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC292041BDBFB5B001853BE /* Assets.xcassets */; };
 		CDC292081BDBFB5B001853BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC292061BDBFB5B001853BE /* LaunchScreen.storyboard */; };
@@ -20,8 +20,8 @@
 		CDC291F91BDBFB5B001853BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDC291FB1BDBFB5B001853BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CDC291FC1BDBFB5B001853BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CDC291FE1BDBFB5B001853BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CDC291FF1BDBFB5B001853BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CDC291FE1BDBFB5B001853BE /* MoviesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesListViewController.h; sourceTree = "<group>"; };
+		CDC291FF1BDBFB5B001853BE /* MoviesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesListViewController.m; sourceTree = "<group>"; };
 		CDC292021BDBFB5B001853BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDC292041BDBFB5B001853BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDC292071BDBFB5B001853BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 			children = (
 				CDC291FB1BDBFB5B001853BE /* AppDelegate.h */,
 				CDC291FC1BDBFB5B001853BE /* AppDelegate.m */,
-				CDC291FE1BDBFB5B001853BE /* ViewController.h */,
-				CDC291FF1BDBFB5B001853BE /* ViewController.m */,
+				CDC291FE1BDBFB5B001853BE /* MoviesListViewController.h */,
+				CDC291FF1BDBFB5B001853BE /* MoviesListViewController.m */,
 				CDC292011BDBFB5B001853BE /* Main.storyboard */,
 				CDC292041BDBFB5B001853BE /* Assets.xcassets */,
 				CDC292061BDBFB5B001853BE /* LaunchScreen.storyboard */,
@@ -150,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDC292001BDBFB5B001853BE /* ViewController.m in Sources */,
+				CDC292001BDBFB5B001853BE /* MoviesListViewController.m in Sources */,
 				CDC291FD1BDBFB5B001853BE /* AppDelegate.m in Sources */,
 				CDC291FA1BDBFB5B001853BE /* main.m in Sources */,
 			);

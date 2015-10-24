@@ -6,13 +6,13 @@
 //  Copyright © 2015 Juan Pablo Marzetti. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MoviesListViewController.h"
 
-@interface ViewController ()
+@interface MoviesListViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MoviesListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
