@@ -15,6 +15,8 @@
 		CDC292081BDBFB5B001853BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC292061BDBFB5B001853BE /* LaunchScreen.storyboard */; };
 		CDC292141BDC0AF0001853BE /* MoviesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC292131BDC0AF0001853BE /* MoviesCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		CDC292171BDC0C00001853BE /* MovieCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC292161BDC0C00001853BE /* MovieCardCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		CDC2921A1BDD5955001853BE /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC292191BDD5955001853BE /* MovieDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CDC2921E1BDD6248001853BE /* SpotifyProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC2921D1BDD6248001853BE /* SpotifyProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		CDC292131BDC0AF0001853BE /* MoviesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesCollectionViewController.m; sourceTree = "<group>"; };
 		CDC292151BDC0C00001853BE /* MovieCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCardCollectionViewCell.h; sourceTree = "<group>"; };
 		CDC292161BDC0C00001853BE /* MovieCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCardCollectionViewCell.m; sourceTree = "<group>"; };
+		CDC292181BDD5955001853BE /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
+		CDC292191BDD5955001853BE /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
+		CDC2921C1BDD6248001853BE /* SpotifyProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotifyProgressHUD.h; sourceTree = "<group>"; };
+		CDC2921D1BDD6248001853BE /* SpotifyProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotifyProgressHUD.m; sourceTree = "<group>"; };
 		FB3E5699C3C6F5E328DAD2D1 /* libPods-week1-assignment-rt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-week1-assignment-rt.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,6 +73,7 @@
 		CDC291EC1BDBFB5B001853BE = {
 			isa = PBXGroup;
 			children = (
+				CDC2921B1BDD623B001853BE /* Controls */,
 				CDC291F71BDBFB5B001853BE /* week1-assignment-rt */,
 				CDC291F61BDBFB5B001853BE /* Products */,
 				B5CEAC244AFD74771005AA21 /* Pods */,
@@ -90,6 +97,8 @@
 				CDC292121BDC0AF0001853BE /* MoviesCollectionViewController.h */,
 				CDC292131BDC0AF0001853BE /* MoviesCollectionViewController.m */,
 				CDC292151BDC0C00001853BE /* MovieCardCollectionViewCell.h */,
+				CDC292181BDD5955001853BE /* MovieDetailViewController.h */,
+				CDC292191BDD5955001853BE /* MovieDetailViewController.m */,
 				CDC292161BDC0C00001853BE /* MovieCardCollectionViewCell.m */,
 				CDC292011BDBFB5B001853BE /* Main.storyboard */,
 				CDC292041BDBFB5B001853BE /* Assets.xcassets */,
@@ -106,6 +115,15 @@
 				CDC291F91BDBFB5B001853BE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDC2921B1BDD623B001853BE /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				CDC2921C1BDD6248001853BE /* SpotifyProgressHUD.h */,
+				CDC2921D1BDD6248001853BE /* SpotifyProgressHUD.m */,
+			);
+			name = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC291FD1BDBFB5B001853BE /* AppDelegate.m in Sources */,
+				CDC2921E1BDD6248001853BE /* SpotifyProgressHUD.m in Sources */,
 				CDC292141BDC0AF0001853BE /* MoviesCollectionViewController.m in Sources */,
+				CDC2921A1BDD5955001853BE /* MovieDetailViewController.m in Sources */,
 				CDC291FA1BDBFB5B001853BE /* main.m in Sources */,
 				CDC292171BDC0C00001853BE /* MovieCardCollectionViewCell.m in Sources */,
 			);
