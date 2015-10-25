@@ -12,14 +12,18 @@
 
 #import "SpotifyProgressHUD.h"
 
-@interface MoviesCollectionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MoviesCollectionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *moviesCollection;
-@property (strong, nonatomic) NSArray *movies;
+@property (weak, nonatomic) IBOutlet UISearchBar *movieSearchBar;
 
 @property (strong, nonatomic) SpotifyProgressHUD *progressHUD;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UIView *networkErrorView;
+
+@property (strong, nonatomic) NSArray *movies;
+@property (strong, nonatomic) NSArray *filteredMovies;
+
 @end
 
 @implementation MoviesCollectionViewController
@@ -28,6 +32,8 @@
     [super viewDidLoad];
     self.moviesCollection.delegate = self;
     self.moviesCollection.dataSource = self;
+    self.movieSearchBar.delegate = self;
+
     self.progressHUD = [[SpotifyProgressHUD alloc] initWithFrame:CGRectMake(0, 0, 150, 150) withPointDiameter:12 withInterval:0.15];
 
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -43,23 +49,48 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.movies.count;
+    return self.filteredMovies.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
  
     MovieCardCollectionViewCell *cell = [self.moviesCollection dequeueReusableCellWithReuseIdentifier:@"movieCard" forIndexPath:indexPath];
 
-    [cell loadMovieFromData:self.movies[indexPath.row]];
+    [cell loadMovieFromData:self.filteredMovies[indexPath.row]];
     
     return cell;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar endEditing:YES];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [searchBar endEditing:YES];
+    self.filteredMovies = self.movies;
+    [self.moviesCollection reloadData];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    NSLog(@"search: %@", searchText);
+    
+    if (searchText.length == 0) {
+        self.filteredMovies = self.movies;
+    } else {
+        self.filteredMovies = [self.movies objectsAtIndexes:[self.movies indexesOfObjectsPassingTest:^BOOL(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
+            NSRange range = [obj[@"title"] rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            return range.location != NSNotFound;
+        }]];
+    }
+    
+    [self.moviesCollection reloadData];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     MovieCardCollectionViewCell *cell = sender;
     MovieDetailViewController *movieDetailsViewController = [segue destinationViewController];
     NSIndexPath *indexPath = [self.moviesCollection indexPathForCell:cell];
-    NSDictionary *movieData = self.movies[indexPath.row];
+    NSDictionary *movieData = self.filteredMovies[indexPath.row];
     [movieDetailsViewController loadMovieData:movieData];
 }
 
@@ -91,6 +122,7 @@
                                                                                       error:&jsonError];
                                                     NSLog(@"Response: %@", responseDictionary);
                                                     self.movies = responseDictionary[@"movies"];
+                                                    self.filteredMovies = self.movies;
                                                     [self.moviesCollection reloadData];
                                                 } else {
                                                     self.networkErrorView.hidden = NO;
