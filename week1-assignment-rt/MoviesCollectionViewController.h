@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MoviesCollectionViewController.h
 //  week1-assignment-rt
 //
 //  Created by Juan Pablo Marzetti on 10/24/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoviesListViewController : UIViewController
-
+@interface MoviesCollectionViewController : UIViewController
 
 @end
-

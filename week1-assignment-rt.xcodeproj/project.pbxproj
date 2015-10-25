@@ -7,25 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		758F5CC877F0BAAE6434A99A /* libPods-week1-assignment-rt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3E5699C3C6F5E328DAD2D1 /* libPods-week1-assignment-rt.a */; };
 		CDC291FA1BDBFB5B001853BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC291F91BDBFB5B001853BE /* main.m */; };
 		CDC291FD1BDBFB5B001853BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC291FC1BDBFB5B001853BE /* AppDelegate.m */; };
-		CDC292001BDBFB5B001853BE /* MoviesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC291FF1BDBFB5B001853BE /* MoviesListViewController.m */; };
 		CDC292031BDBFB5B001853BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC292011BDBFB5B001853BE /* Main.storyboard */; };
 		CDC292051BDBFB5B001853BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC292041BDBFB5B001853BE /* Assets.xcassets */; };
 		CDC292081BDBFB5B001853BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC292061BDBFB5B001853BE /* LaunchScreen.storyboard */; };
+		CDC292141BDC0AF0001853BE /* MoviesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC292131BDC0AF0001853BE /* MoviesCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CDC292171BDC0C00001853BE /* MovieCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC292161BDC0C00001853BE /* MovieCardCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B24F147C608BAB8D7B73F8CB /* Pods-week1-assignment-rt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-week1-assignment-rt.release.xcconfig"; path = "Pods/Target Support Files/Pods-week1-assignment-rt/Pods-week1-assignment-rt.release.xcconfig"; sourceTree = "<group>"; };
+		C2C4F64FE4A5E4512DD5DA67 /* Pods-week1-assignment-rt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-week1-assignment-rt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-week1-assignment-rt/Pods-week1-assignment-rt.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC291F51BDBFB5B001853BE /* week1-assignment-rt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week1-assignment-rt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC291F91BDBFB5B001853BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDC291FB1BDBFB5B001853BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CDC291FC1BDBFB5B001853BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CDC291FE1BDBFB5B001853BE /* MoviesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesListViewController.h; sourceTree = "<group>"; };
-		CDC291FF1BDBFB5B001853BE /* MoviesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesListViewController.m; sourceTree = "<group>"; };
 		CDC292021BDBFB5B001853BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDC292041BDBFB5B001853BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDC292071BDBFB5B001853BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDC292091BDBFB5B001853BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDC292121BDC0AF0001853BE /* MoviesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesCollectionViewController.h; sourceTree = "<group>"; };
+		CDC292131BDC0AF0001853BE /* MoviesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesCollectionViewController.m; sourceTree = "<group>"; };
+		CDC292151BDC0C00001853BE /* MovieCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCardCollectionViewCell.h; sourceTree = "<group>"; };
+		CDC292161BDC0C00001853BE /* MovieCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCardCollectionViewCell.m; sourceTree = "<group>"; };
+		FB3E5699C3C6F5E328DAD2D1 /* libPods-week1-assignment-rt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-week1-assignment-rt.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758F5CC877F0BAAE6434A99A /* libPods-week1-assignment-rt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F78E15B9C0A2AA0F5226B62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB3E5699C3C6F5E328DAD2D1 /* libPods-week1-assignment-rt.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5CEAC244AFD74771005AA21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2C4F64FE4A5E4512DD5DA67 /* Pods-week1-assignment-rt.debug.xcconfig */,
+				B24F147C608BAB8D7B73F8CB /* Pods-week1-assignment-rt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CDC291EC1BDBFB5B001853BE = {
 			isa = PBXGroup;
 			children = (
 				CDC291F71BDBFB5B001853BE /* week1-assignment-rt */,
 				CDC291F61BDBFB5B001853BE /* Products */,
+				B5CEAC244AFD74771005AA21 /* Pods */,
+				1F78E15B9C0A2AA0F5226B62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +87,10 @@
 			children = (
 				CDC291FB1BDBFB5B001853BE /* AppDelegate.h */,
 				CDC291FC1BDBFB5B001853BE /* AppDelegate.m */,
-				CDC291FE1BDBFB5B001853BE /* MoviesListViewController.h */,
-				CDC291FF1BDBFB5B001853BE /* MoviesListViewController.m */,
+				CDC292121BDC0AF0001853BE /* MoviesCollectionViewController.h */,
+				CDC292131BDC0AF0001853BE /* MoviesCollectionViewController.m */,
+				CDC292151BDC0C00001853BE /* MovieCardCollectionViewCell.h */,
+				CDC292161BDC0C00001853BE /* MovieCardCollectionViewCell.m */,
 				CDC292011BDBFB5B001853BE /* Main.storyboard */,
 				CDC292041BDBFB5B001853BE /* Assets.xcassets */,
 				CDC292061BDBFB5B001853BE /* LaunchScreen.storyboard */,
@@ -86,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDC2920C1BDBFB5B001853BE /* Build configuration list for PBXNativeTarget "week1-assignment-rt" */;
 			buildPhases = (
+				90063D3928299FDEA81EEC5D /* Check Pods Manifest.lock */,
 				CDC291F11BDBFB5B001853BE /* Sources */,
 				CDC291F21BDBFB5B001853BE /* Frameworks */,
 				CDC291F31BDBFB5B001853BE /* Resources */,
+				322C626171FF4E05DA5CBE49 /* Embed Pods Frameworks */,
+				858A6FB72AAF27AD9F500304 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,14 +177,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		322C626171FF4E05DA5CBE49 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-week1-assignment-rt/Pods-week1-assignment-rt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		858A6FB72AAF27AD9F500304 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-week1-assignment-rt/Pods-week1-assignment-rt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90063D3928299FDEA81EEC5D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CDC291F11BDBFB5B001853BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDC292001BDBFB5B001853BE /* MoviesListViewController.m in Sources */,
 				CDC291FD1BDBFB5B001853BE /* AppDelegate.m in Sources */,
+				CDC292141BDC0AF0001853BE /* MoviesCollectionViewController.m in Sources */,
 				CDC291FA1BDBFB5B001853BE /* main.m in Sources */,
+				CDC292171BDC0C00001853BE /* MovieCardCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +341,7 @@
 		};
 		CDC2920D1BDBFB5B001853BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2C4F64FE4A5E4512DD5DA67 /* Pods-week1-assignment-rt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "week1-assignment-rt/Info.plist";
@@ -271,6 +353,7 @@
 		};
 		CDC2920E1BDBFB5B001853BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B24F147C608BAB8D7B73F8CB /* Pods-week1-assignment-rt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "week1-assignment-rt/Info.plist";
@@ -299,6 +382,7 @@
 				CDC2920E1BDBFB5B001853BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
