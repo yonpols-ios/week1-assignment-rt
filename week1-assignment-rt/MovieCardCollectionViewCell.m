@@ -7,7 +7,7 @@
 //
 
 #import "MovieCardCollectionViewCell.h"
-#import "UIImageView+AFNetworking.h"
+#import "UIImageView+FadeImage.h"
 
 @implementation MovieCardCollectionViewCell
 
@@ -18,8 +18,8 @@
     NSRange range = [originalUrlString rangeOfString:@".*cloudfront.net/" options:NSRegularExpressionSearch];
     NSString *newUrlString = [originalUrlString stringByReplacingCharactersInRange:range
                                                                         withString:@"https://content6.flixster.com/"];
-    NSURL *imageuURL = [NSURL URLWithString:newUrlString];
-    [self.posterImage setImageWithURL:imageuURL];
+    NSURL *imageURL = [NSURL URLWithString:newUrlString];
+    [self.posterImage setFadeInImageWithURL:imageURL];
 }
 
 @end

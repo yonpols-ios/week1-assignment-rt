@@ -25,35 +25,35 @@
                                 <rect key="frame" x="0.0" y="108" width="320" height="411"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="us9-z6-UL2">
-                                    <size key="itemSize" width="133" height="221"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="us9-z6-UL2">
+                                    <size key="itemSize" width="160" height="221"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCard" id="wyP-qf-rgS" customClass="MovieCardCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="133" height="221"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="221"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="133" height="221"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="221"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="JY3-GN-8Kb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="133" height="186"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PiB-j5-S7m">
-                                                    <rect key="frame" x="0.0" y="200" width="133" height="21"/>
+                                                    <rect key="frame" x="8" y="200" width="136" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="JY3-GN-8Kb">
+                                                    <rect key="frame" x="8" y="8" width="144" height="186"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.70196078429999997" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="posterImage" destination="JY3-GN-8Kb" id="BFg-Ny-uAj"/>
                                             <outlet property="titleLabel" destination="PiB-j5-S7m" id="gvB-Nx-j3B"/>
@@ -76,19 +76,31 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <tabBar contentMode="scaleToFill" id="4gA-D9-70H">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Box Office" image="box-office" id="dlZ-Up-ajX"/>
+                                    <tabBarItem tag="1" title="DVD" image="dvd" id="LkD-1Z-OVN"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Rotten Tomatoes" id="1Qm-xA-qGb"/>
                     <connections>
+                        <outlet property="boxSourceItem" destination="dlZ-Up-ajX" id="4ra-Tr-anE"/>
+                        <outlet property="dvdSourceItem" destination="LkD-1Z-OVN" id="RHU-jO-lfY"/>
                         <outlet property="movieSearchBar" destination="ubH-cR-WtM" id="Pmx-dE-3Hc"/>
                         <outlet property="moviesCollection" destination="xUA-xZ-K05" id="2rv-eM-0X8"/>
                         <outlet property="networkErrorView" destination="NnX-Ug-93j" id="3uP-F1-EBI"/>
+                        <outlet property="sourceTabBar" destination="4gA-D9-70H" id="u5x-h6-21p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WcB-nW-NZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="617" y="-294"/>
+            <point key="canvasLocation" x="618" y="-294"/>
         </scene>
         <!--Movie Detail View Controller-->
         <scene sceneID="wOQ-Zx-4GB">
@@ -156,4 +168,8 @@
             <point key="canvasLocation" x="85" y="-294"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="box-office" width="21" height="21"/>
+        <image name="dvd" width="21" height="21"/>
+    </resources>
 </document>
