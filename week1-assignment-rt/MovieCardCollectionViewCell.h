@@ -11,6 +11,13 @@
 @interface MovieCardCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *posterImage;
+@property (weak, nonatomic) IBOutlet UILabel *mpaaRatingLabel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *criticsRatingImage;
+@property (weak, nonatomic) IBOutlet UILabel *criticsRatingText;
+
+@property (weak, nonatomic) IBOutlet UIImageView *audienceRatingImage;
+@property (weak, nonatomic) IBOutlet UILabel *audienceRatingText;
 
 - (void) loadMovieFromData:(NSDictionary *)movieData;
 @end

@@ -16,7 +16,7 @@
 }
 
 - (void) setFadeInImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholderImage {
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:1000];
     
     if (self.image == nil && placeholderImage == nil) {
         self.alpha = 0.0;

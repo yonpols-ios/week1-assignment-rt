@@ -35,13 +35,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.moviesCollection.delegate = self;
     self.moviesCollection.dataSource = self;
     self.movieSearchBar.delegate = self;
     
-    self.progressHUD = [[SpotifyProgressHUD alloc] initWithFrame:CGRectMake(0, 0, 150, 150) withPointDiameter:12 withInterval:0.15];
-
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(onRefreshPull) forControlEvents:UIControlEventValueChanged];
     [self.moviesCollection insertSubview:self.refreshControl atIndex:0];
@@ -137,16 +135,19 @@
 
                                                     self.movies = responseDictionary[@"movies"];
                                                     self.filteredMovies = self.movies;
+                                                    self.networkErrorView.hidden = YES;
                                                     [self.moviesCollection reloadData];
                                                 } else {
                                                     self.networkErrorView.hidden = NO;
                                                 }
                                                 
                                                 [self.progressHUD removeFromSuperview];
+                                                self.progressHUD = nil;
                                                 block(error);
                                             }];
     
     if (showProgress) {
+        self.progressHUD = [[SpotifyProgressHUD alloc] initWithFrame:CGRectMake(0, 0, 150, 150) withPointDiameter:12 withInterval:0.15];
         self.progressHUD.center = self.view.center;
         [self.view addSubview:self.progressHUD];
     }
