@@ -11,5 +11,5 @@
 @interface UIImageView (FadeImage)
 
 - (void) setFadeInImageWithURL:(NSURL *)url;
-
+- (void) setFadeInImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholderImage;
 @end

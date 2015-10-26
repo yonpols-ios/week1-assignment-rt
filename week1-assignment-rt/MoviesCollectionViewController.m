@@ -106,7 +106,7 @@
     NSIndexPath *indexPath = [self.moviesCollection indexPathForCell:cell];
     NSDictionary *movieData = self.filteredMovies[indexPath.row];
 
-    [movieDetailsViewController loadMovieData:movieData];
+    [movieDetailsViewController loadMovieData:movieData withLowResImage:cell.posterImage.image];
 }
 
 

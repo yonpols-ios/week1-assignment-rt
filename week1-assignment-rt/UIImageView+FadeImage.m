@@ -12,13 +12,18 @@
 @implementation UIImageView(FadeImage)
 
 - (void) setFadeInImageWithURL:(NSURL *)url {
+    [self setFadeInImageWithURL:url placeholderImage:nil];
+}
+
+- (void) setFadeInImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholderImage {
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
-    self.image = nil;
-    self.alpha = 0.0;
+    if (self.image == nil && placeholderImage == nil) {
+        self.alpha = 0.0;
+    }
 
     __weak UIImageView *imageView = self;
-    [self setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+    [self setImageWithURLRequest:request placeholderImage:placeholderImage success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
         imageView.image = image;
         if (response == nil) {
             imageView.alpha = 1;

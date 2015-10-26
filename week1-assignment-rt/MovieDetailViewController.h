@@ -10,6 +10,6 @@
 
 @interface MovieDetailViewController : UIViewController
 
-- (void) loadMovieData:(NSDictionary *)movieData;
+- (void) loadMovieData:(NSDictionary *)movieData withLowResImage:(UIImage *)lowResImage;
 
 @end

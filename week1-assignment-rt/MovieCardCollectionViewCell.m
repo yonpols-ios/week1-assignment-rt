@@ -13,12 +13,8 @@
 
 - (void) loadMovieFromData:(NSDictionary *)movieData {
     self.titleLabel.text = movieData[@"title"];
-    
-    NSString *originalUrlString = movieData[@"posters"][@"detailed"];
-    NSRange range = [originalUrlString rangeOfString:@".*cloudfront.net/" options:NSRegularExpressionSearch];
-    NSString *newUrlString = [originalUrlString stringByReplacingCharactersInRange:range
-                                                                        withString:@"https://content6.flixster.com/"];
-    NSURL *imageURL = [NSURL URLWithString:newUrlString];
+    NSURL *imageURL = [NSURL URLWithString:movieData[@"posters"][@"detailed"]];
+    self.posterImage.image = nil;
     [self.posterImage setFadeInImageWithURL:imageURL];
 }
 

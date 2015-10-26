@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
 @property (strong, nonatomic) NSDictionary *movieData;
+@property (strong, nonatomic) UIImage *lowResImage;
 @property (weak, nonatomic) IBOutlet UIScrollView *movieInfoScroll;
 
 @end
@@ -30,9 +31,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) loadMovieData:(NSDictionary *)movieData {
+- (void) loadMovieData:(NSDictionary *)movieData withLowResImage:(UIImage *)lowResImage {
     self.movieData = movieData;
-    
+    self.lowResImage = lowResImage;
 }
 
 - (void) renderMovieData {
@@ -44,6 +45,15 @@
     NSInteger contentWidth = self.movieInfoScroll.bounds.size.width;
     NSInteger contentHeight = self.synopsisLabel.frame.origin.y + self.synopsisLabel.bounds.size.height + 20;
     
+    //Get hi res image url
+    NSString *originalUrlString = self.movieData[@"posters"][@"detailed"];
+    NSRange range = [originalUrlString rangeOfString:@".*cloudfront.net/"
+                                             options:NSRegularExpressionSearch];
+    NSString *newUrlString = [originalUrlString stringByReplacingCharactersInRange:range
+                                                                        withString:@"https://content6.flixster.com/"];
+    NSURL *url = [NSURL URLWithString:newUrlString];
+    
+    [self.posterImage setFadeInImageWithURL:url placeholderImage:self.lowResImage];
     self.movieInfoScroll.contentSize = CGSizeMake(contentWidth, contentHeight);
 }
 
