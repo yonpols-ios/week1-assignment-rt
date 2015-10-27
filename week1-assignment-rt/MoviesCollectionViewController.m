@@ -28,6 +28,7 @@
 @property (strong, nonatomic) NSArray *dataSourceURLS;
 @property (strong, nonatomic) NSArray *movies;
 @property (strong, nonatomic) NSArray *filteredMovies;
+- (IBAction)displayGestureForTapRecognizer:(UITapGestureRecognizer *)sender;
 
 @end
 
@@ -53,10 +54,6 @@
     self.sourceTabBar.selectedItem = self.boxSourceItem;
     
     [self loadData];
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self.movieSearchBar endEditing:YES];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -94,6 +91,7 @@
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    self.movieSearchBar.text = nil;
     [self loadData:YES withBlock:^(NSError * _Nullable error) { [self.moviesCollection setContentOffset:CGPointMake(0,0) animated:NO]; }];
 }
 
@@ -126,7 +124,9 @@
                                             completionHandler:^(NSData * _Nullable data,
                                                                 NSURLResponse * _Nullable response,
                                                                 NSError * _Nullable error) {
-                                                if (!error) {
+
+                                                NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+                                                if (!error && statusCode == 200) {
                                                     NSError *jsonError = nil;
                                                     NSDictionary *responseDictionary =
                                                     [NSJSONSerialization JSONObjectWithData:data
@@ -161,4 +161,7 @@
     [self loadData:YES withBlock:^(NSError * _Nullable error) {}];
 }
 
+- (IBAction)displayGestureForTapRecognizer:(UITapGestureRecognizer *)sender {
+    [self.movieSearchBar endEditing:YES];
+}
 @end

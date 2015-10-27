@@ -130,6 +130,10 @@
                             </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="t7u-5v-83H" appends="YES" id="T15-by-xPD"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Rotten Tomatoes" id="1Qm-xA-qGb">
                         <barButtonItem key="backBarButtonItem" title="Back" id="uyw-43-DLe"/>
@@ -144,6 +148,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WcB-nW-NZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="t7u-5v-83H">
+                    <connections>
+                        <action selector="displayGestureForTapRecognizer:" destination="0VT-C1-u0d" id="AX9-BL-wEw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="618" y="-294"/>
         </scene>
