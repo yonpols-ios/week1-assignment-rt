@@ -136,13 +136,15 @@
                                                     self.movies = responseDictionary[@"movies"];
                                                     self.filteredMovies = self.movies;
                                                     self.networkErrorView.hidden = YES;
+                                                    self.movieSearchBar.hidden = NO;
                                                     [self.moviesCollection reloadData];
                                                 } else {
                                                     self.networkErrorView.hidden = NO;
+                                                    self.movieSearchBar.hidden = YES;
                                                 }
                                                 
+                                                self.progressHUD.animating = NO;
                                                 [self.progressHUD removeFromSuperview];
-                                                self.progressHUD = nil;
                                                 block(error);
                                             }];
     
