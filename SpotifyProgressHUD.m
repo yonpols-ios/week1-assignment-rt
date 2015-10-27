@@ -47,7 +47,7 @@
         self.interval = interval;
         self.pointDiameter = diameter;
         
-        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        self.backgroundColor = [UIColor colorWithRed:200 green:200 blue:200 alpha:0.5];
         self.layer.cornerRadius = 15;
 
         leftCircle = [self addCircleViewWithXOffsetFromCenter:-35];
